@@ -6,4 +6,9 @@ class User < ApplicationRecord
          :confirmable, :omniauthable
   include DeviseTokenAuth::Concerns::User
   # モデルの関連やバリデーションなどを記述
+
+  # モデルの関連
+  has_many :articles, dependent: :destroy
+  has_many :article_likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end
