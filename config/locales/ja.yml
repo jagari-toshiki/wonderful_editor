@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    errors:
+      messages:
+        blank: "入力されていません"
+        invalid: "が無効です"
+        # 他の一般的なエラーメッセージもここに追加できます
+
+  # 他の一般的なローカライゼーション設定も以下に追加できます。
+  # 例:
+  # date:
+  #   formats:
+  #     default: "%Y年%m月%d日"
