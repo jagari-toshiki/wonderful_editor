@@ -5,10 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :omniauthable
   include DeviseTokenAuth::Concerns::User
-  # モデルの関連やバリデーションなどを記述
 
-  # モデルの関連
   has_many :articles, dependent: :destroy
   has_many :article_likes, dependent: :destroy
   has_many :comments, dependent: :destroy
+
+  validates :name, presence: true
 end
